@@ -1,0 +1,107 @@
+body{
+    position: absolute;
+    width: 1440px;
+    height: 960px;
+    background: #FFFFFF;
+    top: -1px;
+}
+#img{
+    position: absolute;
+    width: 505px;
+    height: 330px;
+    left: 230px;
+    top: 96px;
+    background: url(/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9\,c_fill\,g_auto__c_scale\,w_596.jpg);
+}
+
+h1{
+    position: absolute;
+    width: 380px;
+    height: 50px;
+    left: 830px;
+    top: 136px;
+
+    /* T1 */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+    /* or 50px */
+
+
+    /* Dark #1 */
+
+    color: #121212;
+}
+article{
+    position: absolute;
+    width: 380px;
+    height: 96px;
+    left: calc(50% - 380px/2 + 300px);
+    top: calc(50% - 96px/2 - 222px);
+
+    /* Body Copy */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+
+    /* Dark #1 */
+
+    color: #121212;
+}
+#button{
+    /* button */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 40px;
+    gap: 10px;
+
+    position: absolute;
+    width: 64px;
+    height: 24px;
+    left: 830px;
+    top: 338px;
+
+    /* Primary #1 */
+
+    background: #E4C1AE;
+    border-radius: 40px;
+}
+#textInButton{
+    width: 48px;
+    height: 16px;
+    align-self: center;
+    position: relative;
+    left: 10px;
+
+    /* Button Text */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
