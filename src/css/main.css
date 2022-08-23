@@ -1,25 +1,30 @@
 body{
-    position: absolute;
     width: 1440px;
     height: 960px;
     background: #FFFFFF;
-    top: -1px;
 }
 #img{
-    position: absolute;
     width: 505px;
     height: 330px;
-    left: 230px;
-    top: 96px;
     background: url(/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9\,c_fill\,g_auto__c_scale\,w_596.jpg);
+    margin-right: 95px;
+}
+
+main{
+    align-self: center;
+    display: flex;
+    margin-left: 20%;
+    margin-top: 96px;
+
+}
+
+aside{
+    display: inline-block;
 }
 
 h1{
-    position: absolute;
     width: 380px;
     height: 50px;
-    left: 830px;
-    top: 136px;
 
     /* T1 */
 
@@ -36,23 +41,16 @@ h1{
     color: #121212;
 }
 article{
-    position: absolute;
     width: 380px;
     height: 96px;
-    left: calc(50% - 380px/2 + 300px);
-    top: calc(50% - 96px/2 - 222px);
-
-    /* Body Copy */
 
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
-    /* or 24px */
 
-
-    /* Dark #1 */
+    margin-top: 24px;
 
     color: #121212;
 }
@@ -68,14 +66,12 @@ article{
     padding: 16px 40px;
     gap: 10px;
 
-    position: absolute;
+    position: relative;
     width: 64px;
     height: 24px;
-    left: 830px;
-    top: 338px;
 
     /* Primary #1 */
-
+    margin-top: 32px;
     background: #E4C1AE;
     border-radius: 40px;
 }
