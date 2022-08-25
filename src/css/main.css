@@ -8,12 +8,11 @@ body{
     margin-right: 95px;
 }
 
-main{
+#main{
     align-self: center;
     display: flex;
     margin-left: 20%;
     margin-top: 96px;
-
 }
 
 aside{
@@ -76,6 +75,10 @@ article{
     border-radius: 40px;
 }
 
+#button:hover {
+    background-color: black;
+}
+
 #textInButton{
     width: 48px;
     height: 16px;
@@ -101,4 +104,84 @@ article{
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+
+#Overlay, #Alert{
+    visibility: hidden;
+}
+
+#Overlay{
+    position: fixed;
+    width: 100%;
+    opacity: 0.5;
+    top: -150px;
+    left: -8px;
+    height: 960px;  
+    background-color: #121212;
+    width: calc(100% + 8px);
+}
+
+#Alert
+{
+    position: absolute;
+    height: 210px;
+    width: 920px;
+    background-color: white;
+    bottom: calc(50% - 105px);
+    left: calc(50% - 460px);
+}
+
+#AlertHeader{
+    position: relative;
+    width: 380px;
+    height: 50px;
+    left: 95px;
+    top: 25px;
+
+    /* T1 */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+    /* or 50px */
+
+
+    /* Dark #1 */
+
+    color: #121212;
+}
+
+#AlertText{
+    position: relative;
+    display: inline-flex;
+    top: 20px;
+    left: 95px;
+    font-family: 'Roboto';
+}
+
+#AlertClicks{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#CrossIcon{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 40px;
+    right: 40px;
+}
+
+#CrossIcon:hover{
+    cursor: pointer;
+}
+
+#Cross{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,9 +17,15 @@
             <article id="text">
                 Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
             </article>
-            <div id="button" onmouseover= "proba()">
+            <div id="button" onclick="proba()">
                 <div id="textInButton">Button</div>
             </div>
         </aside>
     </main>
+    <div id="Overlay"></div>
+    <section id="Alert">
+        <h1 id="AlertHeader">Alert!</h1>
+        <div id="AlertText"> You have clicked <b><div id="AlertClicks">X Clicks</div></b> to related button </div>
+        <div id="CrossIcon"><img src="images/cross.png" alt="" id="Cross"></div>
+    </section>
 </body>
