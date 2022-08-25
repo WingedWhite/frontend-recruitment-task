@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="src/css/main.css">
-    <script src="src/js/main.js">
-    </script>
     <title>Marcin Bartkowiak - Recruitment task</title>
+    <script src="src/js/main.js"></script>
 </head>
 <body id="body">
     <main id="main">
@@ -17,15 +16,21 @@
             <article id="text">
                 Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
             </article>
-            <div id="button" onclick="proba()">
+            <div id="button" onclick="show()">
                 <div id="textInButton">Button</div>
             </div>
         </aside>
     </main>
-    <div id="Overlay"></div>
+    <div id="Overlay" onclick="hide()"></div>
     <section id="Alert">
         <h1 id="AlertHeader">Alert!</h1>
-        <div id="AlertText"> You have clicked <b><div id="AlertClicks">X Clicks</div></b> to related button </div>
-        <div id="CrossIcon"><img src="images/cross.png" alt="" id="Cross"></div>
+        <div id="AlertText"> You have clicked <b><div id="AlertClicks">0 Clicks</div></b> to related button </div>
+        <div id="CrossIcon"><img src="images/cross.png" alt="" id="Cross" onclick="hide()"></div>
     </section>
+    <script>
+        var Overlay = document.getElementById('Overlay');
+        var Alert = document.getElementById('Alert');
+        var Button = document.getElementById('button');
+        var CNumber = document.getElementById("AlertClicks");
+    </script>
 </body>

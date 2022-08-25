@@ -1,9 +1,18 @@
-var button = document.getElementById("button");
-var buttonText = document.getElementById("textInButton");
-var buttonColor;
-var buttonTextColor;
+var ClicksNumber = 0;
+document.cookie = "clicks = 0;";
 
-function proba()
+
+
+function show()
 {
-    buttonText.style.background = yellow;
+    Overlay.style.visibility = 'visible';
+    Alert.style.visibility = 'visible';
+    ClicksNumber++;
+    CNumber.innerText[0] = ClicksNumber;
+}
+
+function hide()
+{
+    Overlay.style.visibility = 'hidden';
+    Alert.style.visibility = 'hidden';
 }
