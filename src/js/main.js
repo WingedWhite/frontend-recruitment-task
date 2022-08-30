@@ -52,7 +52,7 @@ function hide()
   Alert.style.visibility = 'hidden';
   Reset.style.visibility = 'hidden';
   console.log(localStorage.getItem("numer"));
-  localStorage.setItem("numer",ClicksNumber);
+  
 }
 
 function reset()
@@ -60,7 +60,6 @@ function reset()
   ClicksNumber = 0;
   CNumber.innerText = ClicksNumber + " Clicks";
   Reset.style.visibility = 'hidden';
-  
 }
 
 document.onclose = function()
