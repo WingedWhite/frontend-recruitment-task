@@ -164,19 +164,34 @@ article{
     padding-right: 5px;
 }
 
-#CrossIcon{
+.Icon{
     position: absolute;
     width: 24px;
     height: 24px;
     top: 40px;
     right: 40px;
+    display: inline-block;
 }
 
-#CrossIcon:hover{
+.Icon:hover{
     cursor: pointer;
 }
 
+
+#ResetIcon{
+    visibility: hidden;
+    position: absolute;
+    right: 75px;
+}
+
 #Cross{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
+}
+#Reset{
     position: absolute;
     top: 5px;
     left: 5px;

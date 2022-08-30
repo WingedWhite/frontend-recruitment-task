@@ -1,4 +1,4 @@
-let ClicksNumber;
+var ClicksNumber;
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -22,25 +22,45 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-if(getCookie('numer') === Number)
+if(window.localStorage.getItem("numer")=== Number)
 {
-    ClicksNumber = getCookie('numer');
+
 }
 else
 {
-    ClicksNumber = 0;
+  ClicksNumber = 0;
 }
 
 function show()
 {
-    Overlay.style.visibility = 'visible';
-    Alert.style.visibility = 'visible';
-    ClicksNumber++;
-    CNumber.innerText = ClicksNumber + " Clicks";
+  Overlay.style.visibility = 'visible';
+  Alert.style.visibility = 'visible';
+  ClicksNumber++;
+  CNumber.innerText = ClicksNumber + " Clicks";
+  if(ClicksNumber>=5)
+  {
+    reset.style.visibility = 'visible';
+  }
 }
 
 function hide()
 {
-    Overlay.style.visibility = 'hidden';
-    Alert.style.visibility = 'hidden';
+  Overlay.style.visibility = 'hidden';
+  Alert.style.visibility = 'hidden';
+  Reset.style.visibility = 'hidden';
 }
+
+function reset()
+{
+  ClicksNumber = 0;
+  CNumber.innerText = ClicksNumber + " Clicks";
+  Reset.style.visibility = 'hidden';
+  
+}
+
+document.onclose = function()
+{
+
+}
+
+location.reload = document.onclose;
