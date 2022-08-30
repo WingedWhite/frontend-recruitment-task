@@ -1,5 +1,6 @@
 var ClicksNumber;
 
+
 function getCookie(cname) {
     let name = cname + "=";
     let ca = document.cookie.split(';');
@@ -22,9 +23,10 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-if(window.localStorage.getItem("numer")=== Number)
+if(localStorage.getItem("numer") !== undefined)
 {
-
+  ClicksNumber = localStorage.getItem("numer");
+  localStorage.removeItem("numer");
 }
 else
 {
@@ -39,8 +41,9 @@ function show()
   CNumber.innerText = ClicksNumber + " Clicks";
   if(ClicksNumber>=5)
   {
-    reset.style.visibility = 'visible';
+    Reset.style.visibility = 'visible';
   }
+  localStorage.setItem("numer",ClicksNumber);
 }
 
 function hide()
@@ -48,6 +51,8 @@ function hide()
   Overlay.style.visibility = 'hidden';
   Alert.style.visibility = 'hidden';
   Reset.style.visibility = 'hidden';
+  console.log(localStorage.getItem("numer"));
+  localStorage.setItem("numer",ClicksNumber);
 }
 
 function reset()
@@ -60,7 +65,7 @@ function reset()
 
 document.onclose = function()
 {
-
+  localStorage.setItem("numer",ClicksNumber);
 }
 
 location.reload = document.onclose;
